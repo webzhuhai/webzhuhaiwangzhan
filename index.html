@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>朱海个人网站首页</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            /* background:url(images/bg.jpg);*/
+
+        }
+
+        .swiper-container {
+            width: 80%;
+            height: 40%;
+            margin: 20px auto;
+
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .xin {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            z-index: 999;
+            left: 30%;
+            display: none;
+            animation: xin 10s linear infinite;
+        }
+
+        .xin:hover {
+            width: 50px;
+            height: 50px;
+        }
+
+        @keyframes xin {
+            10% {
+                top: 40%;
+                left: 30%;
+            }
+            20% {
+                top: 35%;
+                left: 35%;
+            }
+            30% {
+                top: 30%;
+                left: 40%;
+            }
+            40% {
+                top: 25%;
+                left: 45%;
+            }
+            50% {
+                top: 20%;
+                left: 50%;
+            }
+            60% {
+                top: 15%;
+                left: 55%;
+            }
+            100% {
+                top: -10%;
+
+            }
+
+        }
+
+        /* 爱心结束*/
+        .zhuhai {
+            width: 80%;
+            height: 40px;
+
+            margin: auto;
+            /*	   background:linear-gradient(to right, skyblue,blue,skyblue);*/
+            border-radius: 10px;
+        }
+
+        .zhuhai ul {
+            line-height: 40px;
+            width: 100%;
+
+        }
+
+        .zhuhai ul li {
+            width: 15%;
+
+            text-align: center;
+
+        }
+
+        .zhuhai ul li:nth-child(5) {
+            width: 18%;
+        }
+
+        .zhuhai ul li:hover {
+
+            background-color: skyblue;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px yellow;
+            animation: color 1s linear;
+        }
+
+        @keyframes color {
+            from {
+                box-shadow: 0px 0px 0px yellow;
+            }
+            to {
+                box-shadow: 0px 0px 30px red;
+            }
+        }
+
+    /* music */
+        #music{
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 999;
+        }
+        #music .music_bg{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #music .music_pic{
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            animation: music 2s linear infinite;
+        }
+
+        @keyframes music{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <script>
+
+        $(function () {
+            //页面点击事件
+            $("body").click(function () {
+                $("#xin").show()
+            })
+
+
+
+
+// music
+        var state = 1;
+        var music = document.getElementById("music");
+        var audio = document.getElementById("audio");
+        var music_pic = music.getElementsByClassName('music_pic')[0];
+         $("#music").click(function(){
+
+        if (state == 1) {
+          
+            $(".music_bg").hide();
+             $("#audio")[0].pause();
+      
+            music_pic.style.animation = "none";
+            state = 2;
+
+
+        } else if (state == 2) {
+         
+           $(".music_bg").show();
+             $("#audio")[0].play();
+           music_pic.style.animation = "music 2s linear infinite";
+            state = 1;
+
+    
+        }
+        })
+
+
+          var swiper = new Swiper(".swiper-container", {
+        pagination: ".swiper-pagination",
+        loop: true,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        effect: "coverflow",
+        coverflow: {
+            rotate: 0,
+            depth: 400,
+        },
+        keyboardControl: true,
+        slideToClickedSlide: true,
+        paginationClickable: true,
+
+
+    })
+
+        })//入口函数结束
+
+    </script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-inverse">
+    <div class="navbar-header">
+       <div class="navbar-brand">
+            欢迎进入朱海的个人网站
+       </div>
+       <ul class="navbar-nav nav">
+            <li><button class="btn btn-info navbar-btn"><a href="html/fengzhuang.html"> 进入朱海封装的函数页面</a></button></li>
+       </ul>
+    </div>
+</div>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/大学回忆 151.JPG" alt=""></div>
+        <div class="swiper-slide"><img src="images/大学回忆 151.JPG" alt=""></div>
+        <div class="swiper-slide"><img src="images/大学回忆 132.JPG" alt=""></div>
+        <div class="swiper-slide"><img src="images/大学回忆 128.JPG" alt=""></div>
+        <div class="swiper-slide"><img src="images/大学回忆 127.JPG" alt=""></div> 
+        <div class="swiper-slide"><img src="images/大学回忆 132.JPG" alt=""></div>
+        <div class="swiper-slide"><img src="images/大学回忆 151.JPG" alt=""></div>
+        <div class="swiper-slide"><img src="images/大学回忆 298.JPG" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+<!--   //爱心 -->
+<span><img src="images/xin.png" class="xin" id="xin"></span>
+
+<div class="zhuhai">
+    <ul>
+        <li><a href="html/message.html" target="_black">基本信息</a></li>
+        <li><a href="html/collage_life.html" target="_black">大学生活</a></li>
+        <li><a href="html/working.html" target="_black">工作经验</a></li>
+        <li><a href="html/self_introduce.html" target="_black">个人评价</a></li>
+        <li><a href="html/places.html" target="_black">去过的地方</a></li>
+        <li><a href="html/major.html" target="_black">专业技能</a></li>
+    </ul>
+</div>
+
+
+    <!-- music -->
+    <div id="music" >
+        <img src="images/music.gif" alt="" class="music_bg" onclick="music_control">
+        <img src="images/music_off.png" alt="" class="music_pic">
+        <audio src="like.mp3" autoplay loop="loop" id="audio"></audio>
+    </div>
+
+</body>
+</html>
+
+
+
+
+

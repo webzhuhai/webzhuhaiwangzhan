@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>带你走进朱海曾去过的地方</title>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="shortcut icon" href="../favicon.ico"/>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/swiper.animate1.0.2.min.js"></script>
+    <style>
+        .show {
+            display: block;
+        }
+
+        .header {
+            width: 100%;
+            height: 45px;
+            background-color: skyblue;
+            line-height: 45px;
+            color: white;
+            font-size: 20px;
+            padding-left: 10%;
+            position: relative;
+        }
+
+        .header span {
+            position: absolute;
+            right: 15%;
+            line-height: 70px;
+            font-size: 16px;
+            color: black;
+
+        }
+
+        .place {
+            width: 790px;
+            height: auto;
+            background-color: #333;
+            margin-left: 10%;
+            display: none;
+
+        }
+
+        .place img {
+            width: 260px;
+            height: 260px;
+            /*padding:30px;*/
+        }
+
+    </style>
+    <script>
+        $(function () {
+
+            $("#navbar-ul li").click(function () {
+                $(this).addClass("active").siblings().removeClass("active")
+                var index = $(this).index();
+
+                $(".place-box div.place").eq(index).addClass("show").siblings().removeClass("show");
+
+            })
+            //给图片做半透明的效果
+            $(".place>img").hover(function () {
+                $(this).siblings().stop().fadeTo(300, 0.2);
+            }, function () {
+                $(".place>img").stop().fadeTo(300, 1);
+            })
+
+          $(".nav-right span").click(function(){
+              alert("zhu")
+          })
+
+            var mySwiper = new Swiper(".swiper-container", {
+
+                onInit: function (swiper) {//初始化的时候
+                    swiperAnimateCache(swiper);//首先隐藏动画图片
+                    swiperAnimate(swiper);  //显示动画图片
+                },
+
+                onSlideChangeEnd: function (swiper) {
+                    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                }
+
+
+            });
+        })
+    </script>
+</head>
+<body>
+
+<div class="navbar navbar-default  navbar-static-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">
+                去过的地方
+            </a>
+        </div>
+        <ul class="nav navbar-nav" id="navbar-ul">
+            <li class="active"><a href="#">北京</a></li>
+            <li><a href="#">深圳</a></li>
+            <li><a href="#">香港</a></li>
+            <li><a href="#">徐州</a></li>
+            <li><a href="#" data-toggle="dropdown">其他页面
+            <span class="caret"></span>
+            </a>
+              <ul class="dropdown-menu">
+                  <li class="dropdown-header">选择其他页面</li>
+                  <li class="divider"></li>
+                  <li><a href="message.html">基本资料</a></li>
+                  <li class="divider"></li>
+                  <li><a href="collage_life.html">大学生活</a></li>
+                  <li class="divider"></li>
+                  <li><a href="self_introduce.html">个人评价</a></li>
+                  <li class="divider"></li>
+                  <li><a href="places.html">去过的地方</a></li>
+                  <li class="divider"></li>
+                  <li><a href=major.html"">专业技能</a></li>
+              </ul>
+            </li>
+
+        </ul>
+        <button class="btn btn-info navbar-btn navbar-right"><a href="../index.html">点击返回首页</a></button>
+    </div>
+</div>
+
+<div class="place-box">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="place beijing show ani" id="beijing"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s">
+                    <img src="../images/大学回忆 146.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 147.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 148.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 149.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 150.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 151.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                </div>
+                <div class="place shenzheng ani" id="shenzheng"
+                     swiper-animate-effect="rollIn" swiper-animate-duration="1.5s">
+                    <img src="../images/大学回忆 291.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 293.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 298.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 309.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 319.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                    <img src="../images/大学回忆 310.JPG" alt="" class="img-thumbnail ani"
+                         swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                </div>
+                <div class="place xianggang ani" id="xianggang"
+
+                <img src="../images/大学回忆 241.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 246.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 230.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 238.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 171.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 172.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 162.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 168.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 156.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 173.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="zoomIn" swiper-animate-duration="3s"/>
+            </div>
+            <div class="place shanghai ani" id="shanghai"
+                 swiper-animate-effect="rollIn" swiper-animate-duration="1.5s" swiper-animate-deley="0.5s">
+                <img src="../images/大学回忆 088.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 092.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 096.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 131.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 124.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="rollIn" swiper-animate-duration="3s"/>
+                <img src="../images/大学回忆 132.JPG" alt="" class="img-thumbnail ani"
+                     swiper-animate-effect="rollIn" swiper-animate-duration="3s"
+                        />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

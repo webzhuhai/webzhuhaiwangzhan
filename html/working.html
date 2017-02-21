@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>朱海的工作经历页面</title>
+	<link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/swiper.css">
+<link rel="stylesheet" href="../css/animate.min.css">
+<link rel="shortcut icon" href="../favicon.ico"/>
+  <script src="../js/jquery-1.10.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+<script src="../js/swiper.animate1.0.2.min.js"></script>
+  <style>
+    
+    .header{
+    	   width:100%;
+    	   height:45px;
+    	background-color:skyblue;
+    	line-height:45px;
+    	color:white;
+    	font-size:20px;
+    	padding-left:10%;
+    	position:relative;
+    }
+    .header span{
+   position: absolute;
+   right:15%;
+   line-height:70px;
+   font-size:16px;
+   color:black;
+
+    }
+    .header-nav{
+        width:100%;
+        height:45px;
+        background-color:white;
+        line-height:45px;
+        color:white;
+        padding-left:10%;
+        margin-top:2%;
+       padding-right:10%;
+    }
+    .working{
+      padding-left:10%;
+      padding-right:10%;
+      margin-top:2%;zhuhai
+    }
+    .working ul{
+        list-style:none;
+    }
+    .working ul li{
+        float:left;
+        padding-right:30px;
+    }
+  .working-day{
+ 
+      padding-right:10%;
+      display:none;
+  }
+
+  </style>
+
+<script>
+    window.onload=function(){
+        var header=document.getElementById("header");
+        var body=document.getElementById("body");
+        var div=body.children;
+        var lis=header.children;
+        for(var i=0;i<lis.length;i++){
+             lis[i].index=i;
+             lis[i].onclick=function(){           
+                for(var j=0;j<lis.length;j++){
+                     lis[j].className="";
+                      div[j].className="hide"
+                }
+                this.className="active";
+                div[this.index].className="show"
+             }
+        }
+
+
+var mySwiper=new Swiper(".swiper-container",{
+
+        onInit:function(swiper){//初始化的时候
+          swiperAnimateCache(swiper);//首先隐藏动画图片
+          swiperAnimate(swiper);  //显示动画图片
+        },
+  
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+
+      });
+
+
+
+    }
+</script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-inverse">
+      <div class="container">
+          <div class="navbar-header">
+              <span class=" navbar-brand">您已进入朱海的工作经历页面</span>
+          </div>
+          <button class="btn btn-info navbar-btn navbar-right"><a href="../index.html">点击返回首页</a></button>
+
+      </div>
+  </div>
+   <div class="working">
+    <ul class="nav nav-tabs" id="header">
+        <li class="active"><a href="#">第一次工作经历</a></li>
+        <li><a href="#">第二次工作经历</a></li>
+        <li><a href="#">第三次工作经历</a></li>
+        <li><a href="#">第四次工作经历</a></li>
+    </ul>
+  <div id="body">
+
+
+     <div class="working-day show">
+          <div class="swiper-container">
+           <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                    <h3 class="ani flower" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"
+                        swiper-animate-deley="0.5s">第一次工作经历：</h3>
+
+          <p style="text-indent:2rem" class="ani flower" swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-deley="0.5s">
+           记得人生当中第一次工作是在高中二年级的暑假，在家门口的工地上做木工 。工作的时间持续了整整一个暑假，   工作的原因有2：一：家里经济条件不好，二姐在上大学，而我也在上学，生活压力比较大。二：做暑假工可以锻炼自己的意识和人格，让自己在今后学习路上更加努力
+         </p>
+               </div>
+           </div>
+        </div>
+     
+       
+    </div>
+
+
+
+
+                <div class="working-day">
+
+                 <h3>第二次工作经历：</h3>
+        <p style="text-indent:2rem">
+           第二次工作是我大学二年级的是后，由于大学生活空余的时间很多，很多同学开始培养自己的兴趣爱好，还有的同学沉迷于游戏的世界，而我则选择了利用课余的时间和周末做做兼职。找到的是一家培训机构，名叫聚优教育
+        </p>
+ 
+    </div>
+
+
+
+
+    <div class="working-day">
+    <h3>第三次工作经历:</h3>
+         <p style="text-indent:2rem">
+           第二次工作是我大学二年级的是后，由于大学生活空余的时间很多，很多同学开始培养自己的兴趣爱好，还有的同学沉迷于游戏的世界，而我则选择了利用课余的时间和周末做做兼职。找到的是一家培训机构，名叫聚优教育
+        </p>
+    </div>
+
+    <div class="working-day">
+    <h3>第四次工作经历:</h3>
+         <p style="text-indent:2rem">
+           第二次工作是我大学二年级的是后，由于大学生活空余的时间很多，很多同学开始培养自己的兴趣爱好，还有的同学沉迷于游戏的世界，而我则选择了利用课余的时间和周末做做兼职。找到的是一家培训机构，名叫聚优教育
+        </p>
+    </div>
+
+ 
+
+  </div>
+    
+
+
+   </div>
+
+</body>
+</html>
+

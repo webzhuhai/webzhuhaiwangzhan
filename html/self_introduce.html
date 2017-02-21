@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>您已进入朱海的自我介绍页面</title>
+  <link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/swiper.css">
+<link rel="stylesheet" href="../css/animate.min.css">
+  <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="../favicon.ico"/>
+<script src="../js/jquery-1.9.0.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/swiper.animate1.0.2.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <style>
+
+    .header{
+    	   width:100%;
+    	   height:45px;
+    	background-color:skyblue;
+    	line-height:45px;
+    	color:white;
+    	font-size:20px;
+    	padding-left:10%;
+    	position:relative;
+    }
+    .header span{
+   position: absolute;
+   right:15%;
+   line-height:70px;
+   font-size:16px;
+   color:black;
+
+    }
+    .body{
+      width:80%;
+      height:500px;
+      border:5px dashed green;
+      margin:3% 10% 0 10%;
+    overflow: hidden;
+    border-radius: 30px;
+  padding:30px;
+
+/*  background-color: grey*/
+    } 
+
+  .swiper-container{
+       width:100%;
+       height:100%;
+   }
+   .swiper-slide{
+       width: 100%;
+       height: 100%;
+       position:relative;
+   }
+   .swiper-slide img{
+       width:100%;
+       height:100%;
+       border-radius:30px;
+   }
+   .life-work{
+    width:40px;
+    color:red;
+    font-size:40px;
+    position: absolute;
+    top:5%;
+    right:5%;
+    text-shadow: 5px 5px 5px grey;
+   }
+
+
+  </style>
+
+</head>
+<body>
+<div class="navbar navbar-default navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <span class=" navbar-brand">您已进入朱海的自我评价页面</span>
+        </div>
+        <button class="btn btn-info navbar-btn navbar-right"><a href="../index.html">点击返回首页</a></button>
+
+    </div>
+</div>
+
+  <div class="body">
+      <div class="swiper-container">
+         <div class="swiper-wrapper">            
+             <div class="swiper-slide"><img src="../images/大学回忆 024.JPG" alt="" class="img-thumbnail"/>
+                <span class="ani life-work" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s">爱生活，爱旅游</span>
+             </div>
+        <div class="swiper-slide"><img src="../images/大学回忆 288.JPG" alt=""  class="img-thumbnail" />
+            <span class="ani life-work" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s">有梦想，爱拼搏</span>
+        </div>
+        <div class="swiper-slide"><img src="../images/大学回忆 027.JPG" alt=""  class="img-thumbnail" />
+            <span class="ani life-work" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s">爱生活，爱演讲</span>
+        </div>
+        <div class="swiper-slide"><img src="../images/大学回忆 171.JPG" alt=""  class="img-thumbnail"/>
+              <span class="ani life-work" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s">有梦想，有追求</span>
+        </div>
+        <div class="swiper-slide"><img src="../images/大学回忆 172.JPG" alt=""  class="img-thumbnail"/>
+             <span class="ani life-work" swiper-animate-effect="fadeIn" swiper-animate-duration="1s">有梦想，有追求</span>
+        </div>
+        <div class="swiper-slide"><img src="../images/大学回忆 288.JPG" alt="" clag-thumbnail" />
+             <span class="ani life-work" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s">有合作，有团队</span>
+        </div>
+         </div>
+            <div class="swiper-pagination"></div>
+      </div>   
+
+  </div>
+
+
+
+<script>
+    var swiper=new Swiper(".swiper-container",{
+         pagination:".swiper-pagination",
+         keyboardControl:true,
+         paginationClickable:true,
+          direction:"vertical",
+           loop:true,
+           autoplay:2000,
+           speed:2000,
+           autoplayDisableOnInteraction:false,
+           spaceBetween:20,
+            onInit:function(swiper){//初始化的时候
+          swiperAnimateCache(swiper);//首先隐藏动画图片
+          swiperAnimate(swiper);  //显示动画图片
+        },
+          onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+
+    })
+
+</script>
+</body>
+</html>

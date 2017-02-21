@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>朱海的专业技能页面</title>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="shortcut icon" href="../favicon.ico"/>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/swiper.animate1.0.2.min.js"></script>
+  <style>
+
+    .header{
+    	   width:100%;
+    	   height:45px;
+    	background-color:skyblue;
+    	line-height:45px;
+    	color:white;
+    	font-size:20px;
+    	padding-left:10%;
+    	position:relative;
+    }
+    .header span{
+   position: absolute;
+   right:15%;
+   line-height:70px;
+   font-size:16px;
+   color:black;
+
+    }
+
+    /*右侧导航*/
+.nav-right{
+     width:100px;
+     height:250px;
+     border:1px solid red;
+     position: fixed;
+     top:50%;
+     margin-top:-125px;
+     right:-100px;
+}
+.nav-right ul{
+  width:100%;
+  height:50px;
+        text-align:center;
+     line-height: 50px;
+     color:green;
+}
+.nav-right span{
+     position: absolute;
+     width:25px;
+     height:100px;
+     background-color:#666;
+     left:-25px;
+     top:50%;
+     text-align: center;
+     margin-top: -50px
+}
+
+.nav-right-current{
+     background-color:#333;
+}
+  </style>
+<script>
+   $(function(){
+
+        $(".nav-right li").mouseover(function(){
+                  $(this).addClass("nav-right-current").siblings().removeClass("nav-right-current")
+        })
+        var flag=1; 
+        $(".nav-right span").click(function(){
+             if(flag==1){
+                  $(".nav-right").css("right",0);
+                  $(".nav-right span").html(" 其他页面>>");
+                  flag=2;
+             }else{
+                   $(".nav-right").css("right","-100px");
+                  $(".nav-right span").html(" 其他页面<<");
+                  flag=1;
+             }
+        })
+   })
+</script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <span class=" navbar-brand">您已进入朱海的专业技能页面</span>
+        </div>
+        <button class="btn btn-info navbar-btn"><a href="../index.html">点击返回首页</a></button>
+
+    </div>
+</div>
+<!-- 头部导航结束 -->
+<!-- 右侧导航 -->
+<div class="nav-right">
+<span>
+  其他页面<<
+</span>
+   <ul id="nav-right-ul">
+     <li class="nav-right-current"><a href="message.html">基本信息</a></li>
+     <li><a href="collage_life.html">大学生活</a></li>
+     <li><a href="working.html">工作经验</a></li>
+     <li><a href="self_introduce.html">个人评价</a></li>
+     <li><a href="places.html">去过的地方</a></li>
+   </ul>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>朱海的大学生活</title>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="shortcut icon" href="../favicon.ico"/>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/swiper.animate1.0.2.min.js"></script>
+  <style>
+ body{
+       background:url(../images/bg.JPG) ;
+       background-size:cover;
+
+   }
+
+    .header{
+    	   width:100%;
+    	   height:45px;
+    	background-color:skyblue;
+    	line-height:45px;
+    	color:white;
+    	font-size:20px;
+    	padding-left:10%;
+    	position:relative;
+    }
+    .header span{
+   position: absolute;
+   right:15%;
+   line-height:70px;
+   font-size:16px;
+   color:black;
+
+    }
+    html,body{
+         width: 100%;
+         height: 100%;
+
+    }
+
+   .swiper-container{
+       width:100%;
+       height:80%;
+   }
+   .swiper-container li:hover{
+        font-size:30px;
+   }
+   .swiper-slide{
+       width: 100%;
+       height: 100%;
+   }
+   .swiper-slide ul{
+        width:100%;
+        height:100%;
+    
+   }
+   .swiper-slide ul li:first-child{
+       color:yellow;
+       font-size:30px;
+   }
+
+      .swiper-slide ul li{
+         padding-left:10%;
+         padding-top:30px;
+         color:red;
+   }
+
+    .swiper-pagination-bullet{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: #000;
+      background-color: #999;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active{
+      color:#fff;
+      background-color: #07f;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <span class=" navbar-brand">您已进入朱海的大学生活页面</span>
+        </div>
+        <button class="btn btn-info navbar-btn navbar-right"><a href="../index.html">点击返回首页</a></button>
+
+    </div>
+</div>
+
+   <div class="swiper-container">
+     <div class="swiper-wrapper">
+       <div class="swiper-slide">
+             <ul>
+        <li>大一</li>
+        <li>1：参加班委竞选，全票通过晋升班级问题文员</li>
+        <li>2:参加各种学校社团、学生会、演讲比赛、长跑比赛</li>
+        <li>3:多次组织班级活动，如聚餐、集体项目比赛、户外活动</li>
+        <li>4:无挂科、无违纪、表现优秀、第一个过四级</li>
+        <li>5:获得国家励志奖学金和班级一等奖学金</li>
+     
+
+       </ul>
+       </div>
+       <div class="swiper-slide">
+                <ul>
+        <li>大二</li>
+        <li>1：一边学习一边利用业余时间做兼职，积累了大量的销售经验</li>
+        <li>2：大二下学期，由于业务成绩优异并且工作认真踏实，被提升为部门主管，带领团队十人</li>
+        <li>3:获得国家励志奖学金和班级一等奖学金</li>
+     
+
+
+       </ul>
+       </div>
+       <div class="swiper-slide">
+            <ul>
+        <li>大三</li>
+        <li>1：成为上海交大昂立培训机构的部门主管，带领团队十人</li>
+        <li>2：由于表现优秀，被公司安排到香港、深圳学习（各三天）</li>
+        <li>3.大三下学期，自主创业，加盟山东济南冰晶画</li>
+       </ul>
+       </div>
+       <div class="swiper-slide">
+               <ul>
+        <li>大四</li>
+        <li>1：大学最后的一年，把更多的时间和精力放在了学习上</li>
+        <li>2:在南京市鼓楼区一家上司公司（爱康国宾）做了四个月的大客户经理</li>
+        <li>3:顺利拿到学位证书，离开学校，大学生涯结束</li>
+       </ul>
+       </div>
+     </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+   </div>
+
+  <script>
+     var swiper =new Swiper(".swiper-container",{
+       pagination:".swiper-pagination",
+       prevButton:".swiper-button-prev",
+       nextButton:".swiper-button-next",
+       keyboardControl:true,
+       speed:1000,
+       paginationClickable:true,
+       loop:true,
+        paginationBulletRender:function(swiper,index,className){
+        return "<span class='"+className+"'>"+(index+1)+"</span>";
+      },
+     })
+
+  </script>
+</body>
+</html>
